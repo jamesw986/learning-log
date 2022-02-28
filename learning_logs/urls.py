@@ -10,10 +10,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     # Topics page
     path('topics/', views.topics, name='topics'),
-    # Single Topic Page
+    # Page for a specific topic
     path('topics/<int:topic_id>/', views.topic, name='topic'),
     # New topic form
     path('new_topic/', views.new_topic, name='new_topic'),
     # New entry form
     path('new_entry/<int:topic_id>/', views.new_entry, name='new_entry'),
+    # Page for editing an entry
+    path('edit_entry/<int:entry_id>/', views.edit_entry, name='edit_entry'),
 ]
